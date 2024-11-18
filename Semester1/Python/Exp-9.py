@@ -1,14 +1,15 @@
 # Program to take three sides of a triangle and find whether it is scalene, isosceles, equilateral or right triangle.
+sides = [float(input("Enter the first side of the triangle: ")),
+         float(input("Enter the second side of the triangle: ")),
+         float(input("Enter the third side of the triangle: "))]
 
-side1 = int(input("Enter first side: "))
-side2 = int(input("Enter second side: "))
-side3 = int(input("Enter third side: "))
-
-if side1**2 + side2**2 == side3**2:
-    print("Right triangle")
-elif side1 == side2 and side2 == side3:
+if all(x == sides[0] for x in sides):
     print("Equilateral triangle")
-elif (side1 == side2 and side2 != side3) or (side1 == side3 and side3 != side2):
+elif sides[0] == sides[1] or sides[1] == sides[2] or sides[2] == sides[0]:
     print("Isosceles triangle")
 else:
-    print("Scalene triangle")
+    sides.sort()
+    if (sides[2]**2 == sides[0]**2 + sides[1]**2):
+        print("Right triangle")
+    else: 
+        print("Its none of them")

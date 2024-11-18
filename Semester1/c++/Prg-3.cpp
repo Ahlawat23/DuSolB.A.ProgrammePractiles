@@ -11,7 +11,7 @@ struct Student {
 };
 
 int main() {
-	struct Student students[3] = {
+	Student students[3] = {
 		{"Marco", 1, 90.5},
 		{"Jake", 2, 85.0},
 		{"Steve", 3, 75.0}
