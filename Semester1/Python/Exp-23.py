@@ -1,25 +1,22 @@
 # Program that allows two players to play a game of Rock, Paper, Scissors.
 
-import random
+choices = ["rock", "paper", "scissors"]
 
-def player_choice(player):
-    choice = input("{}'s turn: ".format(player))
-    return choice
-
-def game():
-    player1 = "Player 1"
-    player2 = "Player 2"
-    choices = ["rock", "paper", "scissors"]
-    player_1_choice = player_choice(player1)
-    player_2_choice = player_choice(player2)
-    if player_1_choice == player_2_choice:
-        print("It's a tie!")
-    elif (player_1_choice == "rock" and player_2_choice == "scissors") or \
-            (player_1_choice == "paper" and player_2_choice == "rock") or \
-            (player_1_choice == "scissors" and player_2_choice == "paper"):
-        print("{} wins!".format(player1))
+def winner_is(p1_choice, p2_choice):
+    if p1_choice == p2_choice :
+        return "its a tie"
+    elif (p1_choice == "rock" and p2_choice == "scissors") or (p1_choice == "paper" and p2_choice == "scissors") or(p1_choice == "scissors" and p2_choice == "paper"):
+        return "p1 wins"
     else:
-        print("{} wins!".format(player2))
-    return
+        return "p2 win"
 
-game()
+print("Choices: rock, paper, scissors\n")
+
+player1 = input("Player 1, enter your choice: ").strip().lower()
+player2 = input("Player 2, enter your choice: ").strip().lower()
+
+if player1 not in choices or player2 not in choices:
+    print("Invalid input! Choices must be 'rock', 'paper', or 'scissors'.")
+else:
+    result = winner_is(player1, player2)
+    print(result)

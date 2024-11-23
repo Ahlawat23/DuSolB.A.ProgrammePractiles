@@ -1,11 +1,11 @@
 # Program that executes an operation on a list and handles an IndexError exception if the index is out of range.
 
-my_list = input("Enter a list of integers separated by spaces: ")
+my_list = input("Enter a list of integers seprated by spaces: ")
 
 try:
-    my_list[5]
+    my_list[len(my_list)]
 except IndexError as e:
     print(f"Index error: {e}")
 else:
-    result = my_list[0] + my_list[1]
+    result = mylist[0]
     print(result)
