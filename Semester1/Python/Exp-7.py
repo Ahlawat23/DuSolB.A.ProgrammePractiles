@@ -2,5 +2,5 @@
 import math
 
 radius = float(input("Enter radius: "))
-circumference = 2 * 3.14 * radius
+circumference = 2 * math.pi * radius
 print("The circumference is", circumference)
