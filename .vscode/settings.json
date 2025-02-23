@@ -5,6 +5,8 @@
         "string_view": "cpp",
         "initializer_list": "cpp",
         "span": "cpp",
-        "*.tcc": "cpp"
+        "*.tcc": "cpp",
+        "algorithm": "cpp",
+        "format": "cpp"
     }
 }

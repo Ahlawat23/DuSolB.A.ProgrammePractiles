@@ -135,12 +135,3 @@ Node* getNode() {
     }
 }
        
-
-int main() {
-    // Write C++ code here
-    cout << "Hello World!";
-    int a;
-    cin>>a;
-
-    return 0;
-}
