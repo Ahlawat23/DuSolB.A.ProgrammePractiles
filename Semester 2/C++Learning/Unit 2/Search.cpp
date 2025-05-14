@@ -34,7 +34,6 @@ int BinarySearch(int arr[], int size, int target){
         }
     }
     return -1;
-
 };
 
 
