@@ -40,7 +40,7 @@ void insertInMiddle(int value, int position, Node* head) {
     int currentPosition = 1;
     while (current != NULL && currentPosition < position) {
         current = current->next;
-    currentPosition++;
+        currentPosition++;
     }
     if (current == NULL) {
     // Position exceeds the size of the list
